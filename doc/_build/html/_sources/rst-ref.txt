@@ -84,10 +84,8 @@ Examples:
 Info to Sort
 ------------
 
-Creating a webpage
-~~~~~~~~~~~~~~~~~~
 
-Execute the following command from ``doc/`` to generage an HTML webpage::
+Make an HTML webpage::
 
     // Execute from doc/
     make html

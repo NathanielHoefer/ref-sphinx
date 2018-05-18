@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RST Quick Reference &mdash; ref-sphinx 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="ref-sphinx 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to ref-sphinx’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rst-quick-reference">
+<h1>RST Quick Reference<a class="headerlink" href="#rst-quick-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sections">
+<h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
+<p>Syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre>Title:
+
+&lt;Title Name&gt;
+============
+
+Subtitle:
+
+&lt;Subtitle Name&gt;
+---------------
+
+Subsection:
+
+&lt;Subsection Name&gt;
+~~~~~~~~~~~~~~~~~
+</pre></div>
+</div>
+</div>
+<div class="section" id="emphasis">
+<h2>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h2>
+<p>Syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre>*Italic*
+**bold**
+``variable name``
+``function()``
+``expression = 3 + 3``
+</pre></div>
+</div>
+<p>Examples:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>Italic</em></div>
+<div class="line"><strong>bold</strong></div>
+<div class="line"><code class="docutils literal"><span class="pre">variable</span> <span class="pre">name</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">function()</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">expression</span> <span class="pre">=</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">3</span></code></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="paragraph">
+<h2>Paragraph<a class="headerlink" href="#paragraph" title="Permalink to this headline">¶</a></h2>
+<p>Syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre>Paragraph:
+A paragraph is one or more lines of un-indented text, separated
+from the material above and below by blank lines.
+
+Block Quotes:
+    “Block quotes look like paragraphs, but are indented with
+    one or more spaces.”
+
+Line Separations:
+| Because of the pipe characters, this will become one line,
+| And this will become another line, like in poetry.
+
+Terms and Definition:
+term
+    Definition for the “term”, indented beneath it.
+another term
+    And its definition; any of these definitions can continue on for
+    several lines by -- you guessed it! -- being similarly indented.
+
+Lists:
+* Each item in a list starts with an asterisk (or “1.”, “a.”, etc).
+* List items can go on for several lines as long as you remember to
+  keep the rest of the list item indented.
+
+Code Blocks:
+Code blocks are introduced by a double-colon and are indented::
+
+   import docutils
+   print help(docutils)
+
+Doctests:
+    &gt;&gt;&gt; print &#39;But doctests start with &quot;&gt;&gt;&gt;&quot; and need no indentation.&#39;
+</pre></div>
+</div>
+<p>Examples:</p>
+</div>
+<div class="section" id="info-to-sort">
+<h2>Info to Sort<a class="headerlink" href="#info-to-sort" title="Permalink to this headline">¶</a></h2>
+<p>Make an HTML webpage:</p>
+<div class="highlight-python"><div class="highlight"><pre>// Execute from doc/
+make html
+</pre></div>
+</div>
+<p>Test the code within the documentation
+Code found within the documentation can be tested to ensure that it is correctly being displayed.
+There are several methods to tag code for testing</p>
+<p>Using paragraphs beginning with <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>. Note, these paragraphs don&#8217;t need to be indented:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s1">&#39;Hello World!&#39;</span>
+<span class="go">Hello World!</span>
+</pre></div>
+</div>
+<p>Using the <code class="docutils literal"><span class="pre">testcode</span></code> and <code class="docutils literal"><span class="pre">testoutput</span></code> directives:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. testcode::
+
+    print &#39;Hello World!&#39;
+
+.. testoutput::
+
+    Hello World!
+</pre></div>
+</div>
+<p>To execute the tests, run the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>// Execute from doc/
+make doctest
+</pre></div>
+</div>
+<div class="section" id="hosting-documentation">
+<h3>Hosting Documentation<a class="headerlink" href="#hosting-documentation" title="Permalink to this headline">¶</a></h3>
+<p>Documentation can be hosted on a number of websites for free. The primary hosting service is
+<a class="reference external" href="https://readthedocs.org/">ReadTheDocs.org</a> and is fairly straight forward to use. Simply create and account, supply the path to
+your repository, then wait for your documentation to be built.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to have the documentation automatically update when changes are pushed, to your repository,
+you will need to set up a hook within your repository settings.</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="version-control">
+<h3>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx and reStructuredText is compatible with version control systems, however be sure to omit
+<code class="docutils literal"><span class="pre">_build/</span></code> since it contains information not needed for versioning.</p>
+</div>
+<div class="section" id="themes">
+<h3>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h3>
+<p>A theme can be changed via the <code class="docutils literal"><span class="pre">conf.py</span></code> file.
+The themes available can be found online or within the source directory of sphinx.:</p>
+<div class="highlight-python"><div class="highlight"><pre>~/&lt;path&gt;/lib/python2.7/site-packages/sphinx/themes/
+</pre></div>
+</div>
+</div>
+<div class="section" id="additional-comments">
+<h3>Additional Comments<a class="headerlink" href="#additional-comments" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Every sentence/thought, break lines to improve version control modifications and editability.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RST Quick Reference</a><ul>
+<li><a class="reference internal" href="#sections">Sections</a></li>
+<li><a class="reference internal" href="#emphasis">Emphasis</a></li>
+<li><a class="reference internal" href="#paragraph">Paragraph</a></li>
+<li><a class="reference internal" href="#info-to-sort">Info to Sort</a><ul>
+<li><a class="reference internal" href="#hosting-documentation">Hosting Documentation</a></li>
+<li><a class="reference internal" href="#version-control">Version Control</a></li>
+<li><a class="reference internal" href="#themes">Themes</a></li>
+<li><a class="reference internal" href="#additional-comments">Additional Comments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to ref-sphinx&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/rst-ref.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Nathaniel Hoefer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/rst-ref.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
