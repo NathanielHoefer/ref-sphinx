@@ -13,6 +13,7 @@ Contents:
 
    rst-ref
    info-to-sort
+   troubleshoot
 
 
 Indices and tables
