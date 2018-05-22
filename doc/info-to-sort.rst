@@ -72,24 +72,28 @@ The ReadTheDocs Sphinx Theme can be found `here`_ along with the installation an
 Personal Documentation Workflow
 -------------------------------
 
-1. Create new repository on GitHub labelled 'ref-<name>'
-2. Clone repo to PC
-3. Copy ``.gitignore`` file into base of directory
-4. Within the repo, execute ``sphinx quick-start``
-5. Install `sphinx-rtd-theme <http://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html>`_ into the directory following their instructions.
-6. Create and ``.rst`` files and add them to ``index.rst``
-7. Commit and push to GitHub
-8. In the master repository, add the new repository as a submodule using the following command in ``docs/``::
+#. Create new repository on GitHub labelled 'ref-<name>'
+#. Clone repo to PC
+#. Copy ``.gitignore`` file into base of directory
+#. Within the repo, execute ``sphinx quick-start``
+#. Install `sphinx-rtd-theme <http://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html>`_ into the directory following their instructions.
+#. Create and ``.rst`` files and add them to ``index.rst``
+#. Commit and push to GitHub
+#. In the master repository, add the new repository as a submodule using the following command in ``docs/``::
 
     git submodule add <repo> [<path>]
 
-9. If needing to update all the submodules in the master repository, execute the following command::
+#. If cloning the master repo with submodules, execute the following command::
+
+    git submodule init
+
+#. If needing to update all the submodules in the master repository, execute the following command::
 
     git submodule update --recursive --remote
 
-10. Add the submodule index to the master ``index.rst``
-11. Ensure that the webhook for ReadTheDocs on the master repo is correctly set up
-12. Commit and push master repo updates to GitHub, and the changes should be reflected on ReadTheDocs
+#. Add the submodule index to the master ``index.rst``
+#. Ensure that the webhook for ReadTheDocs on the master repo is correctly set up
+#. Commit and push master repo updates to GitHub, and the changes should be reflected on ReadTheDocs
 
  .. note::
 
