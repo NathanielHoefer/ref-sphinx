@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    rst-ref
+   info-to-sort
 
 
 Indices and tables
