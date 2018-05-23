@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ref-sphinx'
+project = u'Sphinx Reference'
 copyright = u'2018, Nathaniel Hoefer'
 author = u'Nathaniel Hoefer'
 
