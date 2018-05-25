@@ -14,8 +14,10 @@ Contents
    :maxdepth: 2
 
    rst-ref
-   info-to-sort
+   rtd
+   doc-workflow
    troubleshoot
+   info-to-sort
 
 
 Indices and tables
